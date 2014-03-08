@@ -474,6 +474,11 @@ window.Chart = function(context){
 				if (data[i].value < lowerValue) {lowerValue = data[i].value;}
 			};
 
+			if (upperValue == lowerValue) {
+				upperValue = upperValue*2;
+				lowerValue = 0;
+			}
+
 			var maxSteps = Math.floor((scaleHeight / (labelHeight*0.66)));
 			var minSteps = Math.floor((scaleHeight / labelHeight*0.5));
 			
@@ -676,6 +681,11 @@ window.Chart = function(context){
 					if (data.datasets[i].data[j] > upperValue){upperValue = data.datasets[i].data[j]}
 					if (data.datasets[i].data[j] < lowerValue){lowerValue = data.datasets[i].data[j]}
 				}
+			}
+
+			if (upperValue == lowerValue) {
+				upperValue = upperValue*2;
+				lowerValue = 0;
 			}
 
 			var maxSteps = Math.floor((scaleHeight / (labelHeight*0.66)));
@@ -1002,6 +1012,11 @@ window.Chart = function(context){
 				}
 			};
 	
+			if (upperValue == lowerValue) {
+				upperValue = upperValue*2;
+				lowerValue = 0;
+			}
+	
 			var maxSteps = Math.floor((scaleHeight / (labelHeight*0.66)));
 			var minSteps = Math.floor((scaleHeight / labelHeight*0.5));
 			
@@ -1205,6 +1220,11 @@ window.Chart = function(context){
 					if ( data.datasets[i].data[j] < lowerValue) { lowerValue = data.datasets[i].data[j] };
 				}
 			};
+	
+			if (upperValue == lowerValue) {
+				upperValue = upperValue*2;
+				lowerValue = 0;
+			}
 	
 			var maxSteps = Math.floor((scaleHeight / (labelHeight*0.66)));
 			var minSteps = Math.floor((scaleHeight / labelHeight*0.5));
